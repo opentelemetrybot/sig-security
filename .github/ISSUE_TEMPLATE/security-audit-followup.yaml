@@ -1,0 +1,86 @@
+name: Security Audit Follow-up
+description: Track follow-up actions from security audits
+title: "[Audit]: "
+labels: ["audit", "security", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This template is for tracking follow-up actions from security audits of the OpenTelemetry project.
+
+  - type: input
+    id: audit-reference
+    attributes:
+      label: Audit Reference
+      description: Reference to the security audit report or finding
+      placeholder: e.g., "2024 CNCF Security Audit - Finding #3"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: What is the severity of this audit finding?
+      options:
+        - Critical
+        - High
+        - Medium
+        - Low
+        - Informational
+    validations:
+      required: true
+
+  - type: textarea
+    id: finding-description
+    attributes:
+      label: Finding Description
+      description: Description of the security audit finding
+      placeholder: Describe the security audit finding in detail
+    validations:
+      required: true
+
+  - type: textarea
+    id: affected-components
+    attributes:
+      label: Affected Components
+      description: Which OpenTelemetry components or repositories are affected?
+      placeholder: List the components, repositories, or areas affected by this finding
+    validations:
+      required: true
+
+  - type: textarea
+    id: recommended-action
+    attributes:
+      label: Recommended Action
+      description: What action was recommended by the audit?
+      placeholder: Describe the recommended action from the audit
+
+  - type: textarea
+    id: proposed-resolution
+    attributes:
+      label: Proposed Resolution
+      description: How do you propose to address this finding?
+      placeholder: Describe your proposed resolution approach
+
+  - type: textarea
+    id: timeline
+    attributes:
+      label: Timeline
+      description: What is the expected timeline for resolution?
+      placeholder: Describe the expected timeline for addressing this finding
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any additional information that might be helpful
+      placeholder: Add any other context, links, or relevant information
+
+  - type: dropdown
+    attributes:
+      label: Tip
+      description: This element is static, used to render a helpful sub-heading for end-users and community members to help prioritize issues. Please leave as is.
+      options:
+        - <sub>[React](https://github.blog/news-insights/product-news/add-reactions-to-pull-requests-issues-and-comments/) with thumbs up to help prioritize this issue. Please use comments to provide useful context, avoiding `+1` or `me too`, to help us triage it. Learn more [here](https://opentelemetry.io/community/end-user/issue-participation/).</sub>
+      default: 0
