@@ -1,0 +1,53 @@
+name: Security Issue
+description: Report a security concern or vulnerability in OpenTelemetry
+title: "[Security] "
+labels: ["security"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Important Security Notice**
+
+        If you've found a security vulnerability, please **DO NOT** create a public issue. Instead, please report it responsibly by following our [security policy](https://github.com/open-telemetry/community/blob/main/security.md).
+
+        This template is for general security discussions, questions, and non-sensitive security-related issues.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Please provide a clear and concise description of the security concern or question.
+      placeholder: Describe the security issue or question
+    validations:
+      required: true
+
+  - type: textarea
+    id: component
+    attributes:
+      label: Affected Component
+      description: Which OpenTelemetry component(s) are affected by this security concern?
+      placeholder: e.g., OpenTelemetry Collector, SDK, specific instrumentation library, etc.
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Provide relevant environment details if applicable.
+      placeholder: |
+        - OS: [e.g., Linux, Windows, macOS]
+        - Version: [e.g., v1.0.0]
+        - Deployment: [e.g., Docker, Kubernetes, bare metal]
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional Context
+      description: Add any other context, screenshots, or relevant information here.
+
+  - type: dropdown
+    attributes:
+      label: Tip
+      description: This element is static, used to render a helpful sub-heading for end-users and community members to help prioritize issues. Please leave as is.
+      options:
+        - <sub>[React](https://github.blog/news-insights/product-news/add-reactions-to-pull-requests-issues-and-comments/) with thumbs up to help prioritize this issue. Please use comments to provide useful context, avoiding `+1` or `me too`, to help us triage it. Learn more [here](https://opentelemetry.io/community/end-user/issue-participation/).</sub>
+      default: 0

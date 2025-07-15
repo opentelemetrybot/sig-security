@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security Vulnerabilities
+    url: https://github.com/open-telemetry/community/blob/main/security.md
+    about: Please report security vulnerabilities responsibly following our security policy
+  - name: Security SIG Meetings
+    url: https://github.com/open-telemetry/community/blob/main/sig-security-charter.md
+    about: Information about Security SIG meetings and participation
+  - name: OpenTelemetry Slack
+    url: https://cloud-native.slack.com/archives/C01N7PP1THC
+    about: Join the #otel-sig-security channel for real-time discussions
