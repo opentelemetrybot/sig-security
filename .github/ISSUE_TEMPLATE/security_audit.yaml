@@ -1,0 +1,143 @@
+name: Security Audit
+description: Report findings from security audits or request security audit
+title: "[Audit]: "
+labels: ["audit"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Security Audit
+        
+        Use this template to report findings from security audits or to request a security audit of a component.
+        
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type
+      description: What type of security audit is this?
+      options:
+        - Audit Finding
+        - Audit Request
+        - Audit Follow-up
+        - Audit Report
+    validations:
+      required: true
+      
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: Brief summary of the audit finding or request
+      placeholder: Describe the audit finding or request in a few sentences
+    validations:
+      required: true
+      
+  - type: textarea
+    id: component
+    attributes:
+      label: Component/Scope
+      description: Which component or area was audited or needs auditing?
+      placeholder: |
+        - Specific repositories
+        - Components or services
+        - Processes or procedures
+        - Infrastructure
+    validations:
+      required: true
+      
+  - type: textarea
+    id: description
+    attributes:
+      label: Detailed Description
+      description: Provide detailed information about the audit finding or request
+      placeholder: |
+        - What was discovered during the audit?
+        - What specific areas need auditing?
+        - What are the security implications?
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity Level
+      description: How severe is this audit finding? (Leave as "Not Applicable" for audit requests)
+      options:
+        - Critical
+        - High
+        - Medium
+        - Low
+        - Informational
+        - Not Applicable
+    validations:
+      required: true
+      
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact Assessment
+      description: What is the potential impact of this finding?
+      placeholder: |
+        - Security implications
+        - Affected systems or components
+        - Potential consequences
+        - Risk level
+        
+  - type: textarea
+    id: recommendation
+    attributes:
+      label: Recommendations
+      description: What are the recommended actions to address this finding?
+      placeholder: |
+        - Immediate actions needed
+        - Long-term improvements
+        - Mitigation strategies
+        - Timeline for remediation
+        
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence/References
+      description: Any evidence, references, or supporting documentation
+      placeholder: |
+        - Audit report sections
+        - Screenshots or logs
+        - External references
+        - Standards or guidelines
+        
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: What is the priority for addressing this finding?
+      options:
+        - Critical
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
+      
+  - type: textarea
+    id: timeline
+    attributes:
+      label: Proposed Timeline
+      description: What is the proposed timeline for addressing this finding?
+      placeholder: |
+        - Immediate actions (within days)
+        - Short-term actions (within weeks)
+        - Long-term actions (within months)
+        
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional Context
+      description: Any other information that might be helpful
+      
+  - type: dropdown
+    attributes:
+      label: Tip
+      description: This element is static, used to render a helpful sub-heading for end-users and community members to help prioritize issues. Please leave as is.
+      options:
+        - <sub>[React](https://github.blog/news-insights/product-news/add-reactions-to-pull-requests-issues-and-comments/) with 👍 to help prioritize this issue. Please use comments to provide useful context, avoiding `+1` or `me too`, to help us triage it. Learn more [here](https://opentelemetry.io/community/end-user/issue-participation/).</sub>
+      default: 0

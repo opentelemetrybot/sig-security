@@ -1,0 +1,102 @@
+name: Security Issue
+description: Report a security-related issue or vulnerability
+title: "[Security]: "
+labels: ["security"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Security Issue Report
+        
+        Thank you for reporting a security issue. Please provide as much detail as possible to help us understand and address the issue.
+        
+        **⚠️ Important:** If this is a security vulnerability that could be exploited, please consider reporting it privately through our security contact channels first.
+        
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: A brief summary of the security issue
+      placeholder: Describe the security issue in a few sentences
+    validations:
+      required: true
+      
+  - type: textarea
+    id: description
+    attributes:
+      label: Detailed Description
+      description: Provide a detailed description of the security issue
+      placeholder: |
+        - What is the security concern?
+        - How was it discovered?
+        - What components or processes are affected?
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity Level
+      description: How severe do you consider this security issue?
+      options:
+        - Critical
+        - High
+        - Medium
+        - Low
+        - Unknown
+    validations:
+      required: true
+      
+  - type: textarea
+    id: impact
+    attributes:
+      label: Potential Impact
+      description: What could be the potential impact if this issue is not addressed?
+      placeholder: |
+        - What systems or data could be affected?
+        - What are the potential consequences?
+        - Who might be impacted?
+    validations:
+      required: true
+      
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce (if applicable)
+      description: If this issue can be reproduced, please provide steps
+      placeholder: |
+        1. Step one
+        2. Step two
+        3. Step three
+        
+  - type: textarea
+    id: mitigation
+    attributes:
+      label: Suggested Mitigation
+      description: Do you have any suggestions for how to address this issue?
+      placeholder: Any ideas for fixing or mitigating this security issue
+      
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      description: Any relevant links, documentation, or references
+      placeholder: |
+        - CVE numbers
+        - Security advisories
+        - Documentation links
+        - Related issues or discussions
+        
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional Context
+      description: Any other information that might be helpful
+      
+  - type: dropdown
+    attributes:
+      label: Tip
+      description: This element is static, used to render a helpful sub-heading for end-users and community members to help prioritize issues. Please leave as is.
+      options:
+        - <sub>[React](https://github.blog/news-insights/product-news/add-reactions-to-pull-requests-issues-and-comments/) with 👍 to help prioritize this issue. Please use comments to provide useful context, avoiding `+1` or `me too`, to help us triage it. Learn more [here](https://opentelemetry.io/community/end-user/issue-participation/).</sub>
+      default: 0

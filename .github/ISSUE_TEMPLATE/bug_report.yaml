@@ -1,0 +1,128 @@
+name: Bug Report
+description: Report a bug in security processes or tools
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Bug Report
+        
+        Use this template to report bugs in security processes, tools, or repository configuration.
+        
+  - type: textarea
+    id: summary
+    attributes:
+      label: Bug Summary
+      description: A brief summary of the bug
+      placeholder: Describe the bug in a few sentences
+    validations:
+      required: true
+      
+  - type: textarea
+    id: description
+    attributes:
+      label: Detailed Description
+      description: Provide a detailed description of the bug
+      placeholder: |
+        - What is not working as expected?
+        - What should be happening instead?
+        - When did you first notice this issue?
+    validations:
+      required: true
+      
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Provide steps to reproduce the bug
+      placeholder: |
+        1. Step one
+        2. Step two
+        3. Step three
+        4. Observe the bug
+    validations:
+      required: true
+      
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+      placeholder: Describe what should happen instead
+    validations:
+      required: true
+      
+  - type: textarea
+    id: actual_behavior
+    attributes:
+      label: Actual Behavior
+      description: What actually happened?
+      placeholder: Describe what actually happened
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      description: Which component or area is affected?
+      options:
+        - GitHub Workflows
+        - Security Scanning
+        - Documentation
+        - Repository Configuration
+        - Process/Procedure
+        - Other
+    validations:
+      required: true
+      
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: What environment or context is this related to?
+      placeholder: |
+        - Operating System
+        - Browser (if applicable)
+        - Tools or versions
+        - Any relevant system information
+        
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or Logs
+      description: If applicable, add screenshots or logs to help explain the problem
+      placeholder: |
+        Paste any relevant screenshots, logs, or error messages here
+        
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: What is the impact of this bug?
+      placeholder: |
+        - How does this affect security processes?
+        - Who is impacted by this issue?
+        - What functionality is broken?
+        
+  - type: textarea
+    id: workaround
+    attributes:
+      label: Workaround
+      description: Is there a temporary workaround for this issue?
+      placeholder: Any temporary solutions or workarounds
+      
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional Context
+      description: Any other information that might be helpful
+      
+  - type: dropdown
+    attributes:
+      label: Tip
+      description: This element is static, used to render a helpful sub-heading for end-users and community members to help prioritize issues. Please leave as is.
+      options:
+        - <sub>[React](https://github.blog/news-insights/product-news/add-reactions-to-pull-requests-issues-and-comments/) with 👍 to help prioritize this issue. Please use comments to provide useful context, avoiding `+1` or `me too`, to help us triage it. Learn more [here](https://opentelemetry.io/community/end-user/issue-participation/).</sub>
+      default: 0

@@ -1,0 +1,102 @@
+name: General Discussion
+description: General security discussion, proposal, or question
+title: "[Discussion]: "
+labels: ["discussion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## General Security Discussion
+        
+        Use this template for general security discussions, proposals, questions, or topics that don't fit into specific categories.
+        
+  - type: textarea
+    id: topic
+    attributes:
+      label: Topic
+      description: What would you like to discuss?
+      placeholder: Brief description of the topic or question
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: Which category best describes this discussion?
+      options:
+        - Security Documentation
+        - Security Audit
+        - Vulnerability Management
+        - Security Best Practices
+        - Community Process
+        - Other
+    validations:
+      required: true
+      
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Provide detailed information about your discussion topic
+      placeholder: |
+        - What is the current situation?
+        - What are you proposing or asking about?
+        - What would you like to see happen?
+    validations:
+      required: true
+      
+  - type: textarea
+    id: background
+    attributes:
+      label: Background & Context
+      description: Any relevant background information or context
+      placeholder: |
+        - Why is this important?
+        - What led to this discussion?
+        - Any relevant history or previous work?
+        
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal or Question
+      description: What specifically are you proposing or asking?
+      placeholder: |
+        - What action should be taken?
+        - What questions need to be answered?
+        - What decisions need to be made?
+        
+  - type: textarea
+    id: impact
+    attributes:
+      label: Expected Impact
+      description: What would be the impact of this discussion or proposal?
+      placeholder: |
+        - Who would be affected?
+        - What would change?
+        - What are the benefits?
+        
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      description: Any relevant links, documentation, or references
+      placeholder: |
+        - Related issues or PRs
+        - Documentation links
+        - External resources
+        - Previous discussions
+        
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional Context
+      description: Any other information that might be helpful
+      
+  - type: dropdown
+    attributes:
+      label: Tip
+      description: This element is static, used to render a helpful sub-heading for end-users and community members to help prioritize issues. Please leave as is.
+      options:
+        - <sub>[React](https://github.blog/news-insights/product-news/add-reactions-to-pull-requests-issues-and-comments/) with 👍 to help prioritize this issue. Please use comments to provide useful context, avoiding `+1` or `me too`, to help us triage it. Learn more [here](https://opentelemetry.io/community/end-user/issue-participation/).</sub>
+      default: 0

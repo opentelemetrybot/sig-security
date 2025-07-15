@@ -1,0 +1,120 @@
+name: Documentation Request
+description: Request for security documentation or improvement
+title: "[Documentation]: "
+labels: ["documentation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Security Documentation Request
+        
+        Use this template to request new security documentation or improvements to existing documentation.
+        
+  - type: textarea
+    id: request
+    attributes:
+      label: Documentation Request
+      description: What documentation do you need or want to improve?
+      placeholder: Brief description of the documentation needed
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type of Documentation
+      description: What type of documentation is this?
+      options:
+        - New Documentation
+        - Update Existing Documentation
+        - Security Guidelines
+        - Best Practices
+        - Process Documentation
+        - API Documentation
+        - User Guide
+        - Developer Guide
+        - Other
+    validations:
+      required: true
+      
+  - type: textarea
+    id: description
+    attributes:
+      label: Detailed Description
+      description: Provide detailed information about what documentation is needed
+      placeholder: |
+        - What specific documentation is missing or needs improvement?
+        - What should be covered in the documentation?
+        - Who is the target audience?
+    validations:
+      required: true
+      
+  - type: textarea
+    id: current_state
+    attributes:
+      label: Current State
+      description: What is the current state of documentation on this topic?
+      placeholder: |
+        - Is there existing documentation that needs updates?
+        - What gaps exist in current documentation?
+        - Are there any related documents?
+        
+  - type: textarea
+    id: use_case
+    attributes:
+      label: Use Case
+      description: Why is this documentation needed?
+      placeholder: |
+        - What problem will this documentation solve?
+        - Who will use this documentation?
+        - What scenarios does it address?
+    validations:
+      required: true
+      
+  - type: textarea
+    id: requirements
+    attributes:
+      label: Requirements
+      description: What should be included in the documentation?
+      placeholder: |
+        - Key topics to cover
+        - Required sections
+        - Examples or scenarios to include
+        - Any specific requirements
+        
+  - type: textarea
+    id: resources
+    attributes:
+      label: Available Resources
+      description: What resources or references are available?
+      placeholder: |
+        - Subject matter experts
+        - Existing documentation to reference
+        - External resources
+        - Related standards or guidelines
+        
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How urgent is this documentation request?
+      options:
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
+      
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional Context
+      description: Any other information that might be helpful
+      
+  - type: dropdown
+    attributes:
+      label: Tip
+      description: This element is static, used to render a helpful sub-heading for end-users and community members to help prioritize issues. Please leave as is.
+      options:
+        - <sub>[React](https://github.blog/news-insights/product-news/add-reactions-to-pull-requests-issues-and-comments/) with 👍 to help prioritize this issue. Please use comments to provide useful context, avoiding `+1` or `me too`, to help us triage it. Learn more [here](https://opentelemetry.io/community/end-user/issue-participation/).</sub>
+      default: 0
